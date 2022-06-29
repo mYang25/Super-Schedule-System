@@ -9,7 +9,7 @@ const getAllMajors = async () => {
 		const $ = cheerio.load(data);
 		var allMajors = [];
 
-		$('p :not(embed):not(strong):not(em):not(a)').each((_idx, el) => {
+		$('p, br :not(embed):not(strong):not(em):not(a)').each((_idx, el) => {
 			const postTitle = $(el).text()
 			allMajors.push(postTitle)
 		});
@@ -24,4 +24,3 @@ const getAllMajors = async () => {
 
 getAllMajors()
 .then((allMajors) => console.log(allMajors));
-
