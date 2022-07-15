@@ -58,13 +58,13 @@
   <h2>An Automatic Complete College Schedule Planner for ALL Majors</h2>
   
   <label for="majors">Choose your major:</label>
-  <select id="major">
-  </select>
-  <script>
 
-    for(var row = 0; row < 738; row++) {
-      var MyVal=document.getElementByTag('td').rows[row].innerHTML;
-      selectHTML += "<option value='" + MyVal + "'>" + MyVal + "</option>";
+  <script>
+    function makeDropdown() {
+      for(var row = 0; row < 738; row++) {
+        var MyVal=document.getElementByTag('td').rows[row].innerHTML;
+        selectHTML += "<option value='" + MyVal + "'>" + MyVal + "</option>";
+      }
     }
   </script>
 
